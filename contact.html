@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Haukai Restaurant</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Haukai Restaurant</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="hours.html">Hours</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Contact Us</h2>
+        <p>1 Island Street, Kerikeri, Bay of Islands</p>
+        <p>Phone: 09 401 4019</p>
+        <div id="map" style="width:100%;height:400px;"></div>
+        <script>
+            function initMap() {
+                var haukai = {lat: -35.228, lng: 173.947};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 15,
+                    center: haukai
+                });
+                var marker = new google.maps.Marker({
+                    position: haukai,
+                    map: map
+                });
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDecd_XCxVTqx7gfZmGTT0ixhBG4j58yl0&callback=initMap"></script>
+    </main>
+    <footer>
+        <p>&copy; 2024 Haukai Restaurant</p>
+    </footer>
+</body>
+</html>
